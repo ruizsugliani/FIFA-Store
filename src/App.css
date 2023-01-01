@@ -1,20 +1,28 @@
 body {
   text-align: center;
+  user-select: none;
   background: rgb(8,85,203);
   background: linear-gradient(0deg, rgba(8,85,203,1) 13%, rgba(60,120,210,1) 54%, rgba(112,157,223,1) 91%);
 }
 
-.NavBarContainer {
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
+/* Cart Widget */
+.CartWidgetContainer {
+  width: 50px;
+  background-color: white;
 }
 
-.CartWidgetContainer {
-  display: flex;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 25px;
-  justify-content: center;
-  align-items: center;
+/* Item List */
+.itemListDescription {
+  max-width: 50vw;
+  font-size: 3em;
+}
+
+/* Item */
+
+.ItemContainer {
+  margin: 1em;
+}
+
+.ItemContainer img {
+  width: 100%;
 }

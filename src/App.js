@@ -1,28 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar';
-import CartWidget from './components/CartWidget';
+import NavBar from "./components/NavBar";
+import ItemList from "./components/ItemList";
 
 function App() {
   return (
-    <NavBar />
-    
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+    <main>
+      <NavBar />
+      <ItemList 
+        description="Show your skills with the Qatar 2022 World Cup Official Match Ball"
+        />
+    </main>
   );
 }
 
