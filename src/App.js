@@ -1,16 +1,14 @@
 import './App.css';
 import NavBar from "./components/NavBar";
-import ItemList from "./components/ItemList";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
-  return (
-    <main>
+  return <>
       <NavBar />
-      <ItemList 
-        description="Show your skills with the Qatar 2022 World Cup Official Match Ball"
+      <ItemListContainer
+        greeting="Welcome to our web app! We are actually delevoping a brand new FIFA Store, stay tuned!"
         />
-    </main>
-  );
+    </>;
 }
 
 export default App;
