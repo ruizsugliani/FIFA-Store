@@ -1,11 +1,11 @@
-import Item from "./Item";
+import Item from "./Item"
 
-function ItemListContainer(props) {
+function ItemList(props) {
     return (
-        <div className="ItemListContainer container-fluid d-flex justify-content-center align-items-top">
+        <div className="ItemListContainer container-fluid d-flex">
             <div className="itemListDescription container-fluid">
                 <strong>
-                    {props.greeting}
+                    {props.description}
                 </strong>
             </div>
             <div className="itemListItems d-flex">
@@ -18,8 +18,8 @@ function ItemListContainer(props) {
                     imageUrl="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ae4874fa8d2b40d483f5ae88012a2af4_9366/Pelota_Al_Hilm_Pro_Dorado_HC0437_01_standard.jpg"
                     />
             </div>
-        </div>
-    );
+        </div>    
+    )    
 }
 
-export default ItemListContainer
+export default ItemList

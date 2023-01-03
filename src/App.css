@@ -15,8 +15,21 @@ body {
 
 /* Item List Container */
 .ItemListContainer {
-  height: 100vh;
+  /* height: 100vh; */
   font-size: 3em;
   background-image: url("https://cloudinary.fifa.com/m/23b719e239ef529a/original/Australia-Portraits-FIFA-World-Cup-Qatar-2022.jpg");
   background-size: cover;
+}
+
+/* Item */
+.ItemContainer p {
+  font-size: .5em
+}
+
+.ItemCountContainer {
+  font-size: .5em;
+}
+
+.ItemCountContainer button {
+  width: 25%;
 }
