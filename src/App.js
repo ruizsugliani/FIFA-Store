@@ -6,7 +6,7 @@ function App() {
   return <>
       <NavBar />
       <ItemListContainer
-        greeting="Welcome to our web app! We are actually delevoping a brand new FIFA Store, stay tuned!"
+        greeting="Welcome to our web app! We are actually delevoping a brand new FIFA Store, stay tuned! Thirty two nations, one dream, one winner."
         />
     </>;
 }

@@ -1,4 +1,4 @@
-import logo from '../images/fifa_store_logo.png'
+import logo from '../images/fifa_store_logo.jpg'
 import CartWidget from "./CartWidget";
 
 function NavBar() {

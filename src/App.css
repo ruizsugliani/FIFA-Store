@@ -22,12 +22,23 @@ body {
 }
 
 /* Item */
+.ItemContainer {
+  text-align: left;
+}
 .ItemContainer p {
   font-size: .5em
 }
 
 .ItemCountContainer {
   font-size: .5em;
+}
+
+.ItemCountContainer .counterContainer {
+  width: 100%;
+}
+
+.ItemCountContainer .addToCartContainer {
+  width: 100%;
 }
 
 .ItemCountContainer button {
