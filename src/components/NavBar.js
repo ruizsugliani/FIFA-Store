@@ -3,7 +3,7 @@ import CartWidget from "./CartWidget";
 
 function NavBar() {
     return (
-        <nav className="navbar navbar-expand-md bg-body-tertiary" data-bs-theme="dark">
+        <nav className="navbar container-fluid navbar-expand-md bg-body-tertiary" data-bs-theme="dark">
             <div className="container-fluid d-flex justify-content-between align-items-center">
                 <div className="d-flex justify-content-between align-items-center">
                     <a className="navbar-brand" href="/">
