@@ -18,13 +18,16 @@ function NavBar() {
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item border-bottom ms-3">
-                                <a className="nav-link active" aria-current="page" href="/">FIFA World Cup 2022 Merch</a>
+                                <a className="nav-link active" aria-current="page" href="/">World Cup Winners</a>
                             </li>
                             <li className="nav-item border-bottom ms-3">
-                                <a className="nav-link active" aria-current="page" href="/">Official Match Ball</a>
+                                <a className="nav-link active" aria-current="page" href="/">FIFA World Cup 2022</a>
                             </li>
                             <li className="nav-item border-bottom ms-3">
-                                <a className="nav-link active" aria-current="page" href="/">Nations</a>
+                                <a className="nav-link active" aria-current="page" href="/">Football Shirts</a>
+                            </li>
+                            <li className="nav-item border-bottom ms-3">
+                                <a className="nav-link active" aria-current="page" href="/">Balls</a>
                             </li>
                         </ul>
                     </div>

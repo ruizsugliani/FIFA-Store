@@ -1,6 +1,13 @@
 import Item from "./Item";
+import promiseExample from "../promiseExample";
+import products from "../products"
 
 function ItemListContainer(props) {
+    
+    promiseExample(products, 2000)
+    .then(resp => console.log(resp))
+    .catch(err => console.log(err));
+
     return (
         <div className="ItemListContainer container-fluid d-flex justify-content-center align-items-top">
             <div className="itemListDescription container-fluid">
@@ -9,7 +16,7 @@ function ItemListContainer(props) {
                 </strong>
             </div>
             <div className="itemListItems d-flex">
-                <Item title ="Al Rihla Official Match Ball"
+                <Item title = "Al Rihla Official Match Ball"
                     price ="50"
                     pictureUrl="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4e9f4bf4ae664b0798d4ae6201337d82_9366/Pelota_Al_Rihla_League_Blanco_H57791_01_standard.jpg"
                     />
