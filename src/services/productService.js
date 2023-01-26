@@ -5,7 +5,7 @@ const getAll = (data) => {
         setTimeout(() => {
             resolve(data);
             reject("Something went wrong !");
-        }, 3000);
+        }, 2000);
 
     })
     
