@@ -2,8 +2,16 @@ body {
   text-align: center;
   user-select: none;
   font-family: 'Poppins', sans-serif;
-  background: rgb(8,85,203);
-  background: linear-gradient(0deg, rgba(8,85,203,1) 13%, rgba(60,120,210,1) 54%, rgba(112,157,223,1) 91%);
+  background: rgb(134,134,134);
+  background: linear-gradient(0deg, rgba(134,134,134,1) 2%, rgba(193,194,196,1) 39%, rgba(245,247,250,1) 100%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.linkButton {
+  color: white;
 }
 
 /* Cart Widget */
@@ -27,6 +35,16 @@ body {
 .ItemContainer {
   text-align: left;
   width: 5em;
+  opacity: .8;
+  flex-grow: 5;
+  object-fit: cover;
+  transition: .5s ease;
+}
+
+.ItemContainer:hover {
+  width: 6em;
+  opacity: 1;
+  filter: contrast(105%);
 }
 
 .ItemContainer p {
@@ -34,6 +52,7 @@ body {
 }
 
 .ItemCountContainer {
+  width: 40em;
   font-size: .5em;
   text-align: center;
 }
@@ -48,4 +67,8 @@ body {
 
 .ItemCountContainer button {
   width: 25%;
+}
+
+.DetailPictureContainer img {
+  width: 100%;
 }

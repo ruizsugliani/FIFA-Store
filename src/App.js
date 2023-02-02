@@ -1,14 +1,18 @@
 import './App.css';
-import NavBar from "./components/NavBar";
-import ItemListContainer from "./components/ItemListContainer";
+import Home from './components/Home';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  return <>
-      <NavBar />
-      <ItemListContainer
-        greeting="Welcome to our web app! We are actually delevoping a brand new FIFA Store, stay tuned! The world's dream, thirty two nations, one winner..."
-        />
-    </>;
+  return (
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/item/:itemId" element={<ItemDetailContainer />}></Route>
+          {/* <Route path="/winners" element={<Category />}></Route> */}
+        </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;

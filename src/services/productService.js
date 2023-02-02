@@ -5,10 +5,23 @@ const getAll = (data) => {
         setTimeout(() => {
             resolve(data);
             reject("Something went wrong !");
-        }, 2000);
+        }, 500);
 
     })
     
 }
 
-export const productService = { getAll };
+const getById = (data, id) => {
+
+    return new Promise((resolve, reject) => {
+        
+        setTimeout(() => {
+            resolve(data.find(elem => elem.id.toString() === id));
+            reject("Something went wrong !");
+        }, 500);
+
+    })
+
+}
+
+export const productService = { getAll, getById };

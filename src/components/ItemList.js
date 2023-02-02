@@ -8,7 +8,9 @@ function ItemList( { items } ) {
                     return (
                         <Item 
                             key={item.id}
+                            id={item.id}
                             title = {item.title}
+                            description={item.description}
                             price = {item.price}
                             pictureUrl= {item.pictureUrl} /> 
                     )
