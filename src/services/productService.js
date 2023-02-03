@@ -1,9 +1,11 @@
-const getAll = (data) => {
+import allProducts from "../data/allProducts";
+
+const getAll = (allProducts) => {
     
     return new Promise((resolve, reject) => {
         
         setTimeout(() => {
-            resolve(data);
+            resolve(allProducts);
             reject("Something went wrong !");
         }, 500);
 
@@ -11,12 +13,12 @@ const getAll = (data) => {
     
 }
 
-const getById = (data, id) => {
+const getById = (id) => {
 
     return new Promise((resolve, reject) => {
         
         setTimeout(() => {
-            resolve(data.find(elem => elem.id.toString() === id));
+            resolve(allProducts.find(elem => elem.id.toString() === id));
             reject("Something went wrong !");
         }, 500);
 

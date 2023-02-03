@@ -1,7 +1,6 @@
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import ItemDetail from "./ItemDetail";
-import matchBalls from "../data/matchBalls";
 import { productService } from "../services/productService";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
@@ -13,7 +12,7 @@ function ItemDetailContainer() {
     const  {itemId} = useParams();
 
     useEffect( () => {
-        productService.getById(matchBalls, itemId)
+        productService.getById(itemId)
         .then(data => setItem(data))
     }, [itemId])
     
