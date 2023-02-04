@@ -1,6 +1,9 @@
 # Welcome to a brand new (and unofficial) FIFA Store.
 This app is the result of all the knowledge I got during the React JS course of CoderHouse.\
 To see the app in your browser, first clone this repository, go to the proyect directory and then write in your console..
+
+### `npm install`
+
 ### `npm start`
 
 This script runs the app in the development mode.\
