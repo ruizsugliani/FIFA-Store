@@ -2,20 +2,24 @@ import Item from "./Item"
 
 function ItemList( { items } ) {
     return (
-        <div className="itemListItems d-flex flex-wrap justify-content-center align-content-center flex-wrap">
+        <div className="itemListItems container-md d-flex flex-wrap justify-content-center align-content-center flex-wrap overflow-hidden">
+            <div className="row gy-3 gx-0">
             {
-                items.map(item => {
+                items.map( ({ id, title, description, price, pictureUrl }) => {
                     return (
-                        <Item 
-                            key={item.id}
-                            id={item.id}
-                            title = {item.title}
-                            description={item.description}
-                            price = {item.price}
-                            pictureUrl= {item.pictureUrl} /> 
+                            <div className="col-lg-3 col-md-6 col-sm-6 col-12">
+                                <Item 
+                                    key={id}
+                                    id={id}
+                                    title = {title}
+                                    description={description}
+                                    price = {price}
+                                    pictureUrl= {pictureUrl} /> 
+                            </div>
                     )
                 })
             }
+            </div>
         </div>  
     )    
 }

@@ -19,16 +19,10 @@ function NavBar() {
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item border-bottom ms-3">
-                                <NavLink className="nav-NavLink linkButton" to="/category/1">Champions</NavLink>
+                                <NavLink className="nav-NavLink linkButton" to="/category/1">Nations Equipment</NavLink>
                             </li>
                             <li className="nav-item border-bottom ms-3">
-                                <NavLink className="nav-NavLink linkButton" to="/category/2">World Cup 2022</NavLink>
-                            </li>
-                            <li className="nav-item border-bottom ms-3">
-                                <NavLink className="nav-NavLink linkButton" to="/category/3">Shirts</NavLink>
-                            </li>
-                            <li className="nav-item border-bottom ms-3">
-                                <NavLink className="nav-NavLink linkButton" to="/category/4">Balls</NavLink>
+                                <NavLink className="nav-NavLink linkButton" to="/category/2">World Cup Merch</NavLink>
                             </li>
                         </ul>
                     </div>

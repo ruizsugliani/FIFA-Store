@@ -4,7 +4,7 @@ function ItemDetail( { description, title, price, pictureUrl } ) {
 
     return (
         <>
-            <div className="ItemDetailContainer d-flex container bg-secondary-subtle">
+            <div className="ItemDetailContainer d-flex container bg-secondary-subtle m-4 border border-dark rounded">
                 <div className="DetailPictureContainer">
                     <img src={`${pictureUrl}`} alt={`${title}`} />
                 </div>

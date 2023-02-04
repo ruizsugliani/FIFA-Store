@@ -1,9 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   text-align: center;
   user-select: none;
   font-family: 'Poppins', sans-serif;
   background: rgb(134,134,134);
   background: linear-gradient(0deg, rgba(134,134,134,1) 2%, rgba(193,194,196,1) 39%, rgba(245,247,250,1) 100%);
+}
+
+footer {
+  bottom: 0;
 }
 
 a {
@@ -28,23 +37,25 @@ a {
 }
 
 .categoryTitle {
-  color: whhite;
+  color: white;
 }
 
 /* Item */
 .ItemContainer {
   text-align: left;
   width: 5em;
+  height: 11em;
   opacity: .8;
   flex-grow: 5;
   object-fit: cover;
-  transition: .5s ease;
+  transition: .3s ease;
 }
 
 .ItemContainer:hover {
   width: 6em;
   opacity: 1;
   filter: contrast(105%);
+  position: absolute;
 }
 
 .ItemContainer p {

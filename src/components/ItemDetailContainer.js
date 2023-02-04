@@ -5,11 +5,12 @@ import { productService } from "../services/productService";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
+import ReactLoading from "react-loading";
 
 function ItemDetailContainer() {
 
-    const [item, setItem] = useState();
-    const  {itemId} = useParams();
+    const  { itemId } = useParams();
+    const [item, setItem] = useState(null);
 
     useEffect( () => {
         productService.getById(itemId)
@@ -19,12 +20,16 @@ function ItemDetailContainer() {
     return (
         <>
             <NavBar />
-            <ItemDetail 
-                description = {`${item && item.description}`}
-                title = {`${item && item.title}`}
-                price = {`${item && item.price}`}
-                pictureUrl = {`${item && item.pictureUrl}`}
-            />
+                <div className="container d-flex justify-content-center align-items-center">
+                    {
+                        (item) ? <ItemDetail 
+                        description = {`${item && item.description}`}
+                        title = {`${item && item.title}`}
+                        price = {`${item && item.price}`}
+                        pictureUrl = {`${item && item.pictureUrl}`}
+                    />: <ReactLoading type={"bars"} color={"#black"} height={'20%'} width={'20%'} />
+                    }
+                </div>
             <Footer />
         </>
     )

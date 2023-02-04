@@ -1,4 +1,4 @@
-const worldCupWinners = [
+const nationsEquipment = [
     {
         "id": 10,
         "title": "Argentina First Kit Shirt", 
@@ -57,4 +57,4 @@ const worldCupWinners = [
     }
 ];
 
-export default worldCupWinners;
+export default nationsEquipment;

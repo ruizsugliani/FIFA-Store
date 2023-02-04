@@ -1,13 +1,13 @@
 import allProducts from "../data/allProducts";
 
-const getAll = (allProducts) => {
+const getAll = (category) => {
     
     return new Promise((resolve, reject) => {
         
         setTimeout(() => {
-            resolve(allProducts);
+            resolve(category);
             reject("Something went wrong !");
-        }, 500);
+        }, 1500);
 
     })
     
@@ -20,7 +20,7 @@ const getById = (id) => {
         setTimeout(() => {
             resolve(allProducts.find(elem => elem.id.toString() === id));
             reject("Something went wrong !");
-        }, 500);
+        }, 1500);
 
     })
 
