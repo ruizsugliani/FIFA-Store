@@ -34,7 +34,7 @@ function ItemListContainer(props) {
                     </strong>
                 </div>
                 {
-                    (categoryArray.length === 0) ? <ReactLoading type={"bars"} color={"black"} height={'20%'} width={'20%'} /> : <ItemList items={categoryArray} />
+                    (categoryArray.length === 0) ? <ReactLoading type={"bars"} color={"black"} height={'5%'} width={'5%'} /> : <ItemList items={categoryArray} />
                 }
             </div>
             <Footer />

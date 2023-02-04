@@ -1,4 +1,6 @@
 import allProducts from "../data/allProducts";
+const DELAY = 2000
+
 
 const getAll = (category) => {
     
@@ -7,7 +9,7 @@ const getAll = (category) => {
         setTimeout(() => {
             resolve(category);
             reject("Something went wrong !");
-        }, 1500);
+        }, DELAY);
 
     })
     
@@ -20,7 +22,7 @@ const getById = (id) => {
         setTimeout(() => {
             resolve(allProducts.find(elem => elem.id.toString() === id));
             reject("Something went wrong !");
-        }, 1500);
+        }, DELAY);
 
     })
 
