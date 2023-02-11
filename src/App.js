@@ -8,6 +8,7 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<ItemListContainer />}></Route>
+          {/* <Route path="/cart" element={<Cart />}></Route> */}
           <Route path="/item/:itemId" element={<ItemDetailContainer />}></Route>
           <Route path="/category/:categoryId" element={<ItemListContainer />}></Route>
         </Routes>

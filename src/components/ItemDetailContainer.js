@@ -27,7 +27,8 @@ function ItemDetailContainer() {
                         title = {`${item && item.title}`}
                         price = {`${item && item.price}`}
                         pictureUrl = {`${item && item.pictureUrl}`}
-                        />: <ReactLoading type={"bars"} color={"#black"} height={'5%'} width={'5%'} />
+                        />: 
+                        <ReactLoading type={"bars"} color={"#black"} height={'5%'} width={'5%'} />
                     }
                 </div>
             <Footer />

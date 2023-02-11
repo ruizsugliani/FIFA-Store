@@ -11,7 +11,7 @@ function Footer() {
                         <button className="btn btn-primary" type="button">Subscribe</button>
                     </div>
                 </form>
-                <p className="text-light pt-5">© 2022 Santiago Nahuel Ruiz Sugliani. All rights reserved.</p>
+                <p className="text-light pt-5">© 2022 Santiago Nahuel Ruiz Sugliani.<br></br> All rights reserved.</p>
             </div>
         </footer>
     )
