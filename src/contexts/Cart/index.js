@@ -6,8 +6,12 @@ const CartProvider = ( { children } )  => {
 
     const [ itemsInCart, setItemsInCart ] = useState([])
 
+    const hasProducts = () => {
+        return itemsInCart.length > 0;
+    }
+
     return (
-        <CartContext.Provider value={ {itemsInCart, setItemsInCart} }>
+        <CartContext.Provider value={ {itemsInCart, setItemsInCart, hasProducts} }>
             { children }
         </CartContext.Provider>
     )
