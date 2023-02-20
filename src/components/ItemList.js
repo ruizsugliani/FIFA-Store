@@ -3,7 +3,7 @@ import Item from "./Item"
 function ItemList( { items } ) {
     return (
         <div className="itemListItems container-md d-flex flex-wrap justify-content-center align-content-center flex-wrap overflow-hidden">
-            <div className="row gy-3 gx-0">
+            <div className="row gy-0">
             {
                 items.map( ({ id, title, description, price, pictureUrl }) => {
                     return (

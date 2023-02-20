@@ -7,8 +7,15 @@ body {
   text-align: center;
   user-select: none;
   font-family: 'Poppins', sans-serif;
-  background: rgb(134,134,134);
-  background: linear-gradient(0deg, rgba(134,134,134,1) 2%, rgba(193,194,196,1) 39%, rgba(245,247,250,1) 100%);
+  
+  background: #ad5389;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  
+
+  /* background-image: linear-gradient(to right, #8360c3, #2ebf91); */
+  /* background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
 }
 
 footer {
@@ -87,4 +94,8 @@ a {
 .PNGsuccess {
   width: 2em;
   height: 2em;
+}
+
+.cartItemPictureContainer {
+  max-width: 200px;
 }

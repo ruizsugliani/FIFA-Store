@@ -1,18 +1,37 @@
-import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useState, useContext } from "react"
 import ItemCount from "./ItemCount"
-import checkPNG from "./../images/comprobado.png"
+import AddedToCartAd from "./AddedToCartAd"
+import { CartContext } from "./../contexts/Cart"
 
-function ItemDetail( { description, title, price, pictureUrl } ) {
+function ItemDetail( { id, description, title, price, pictureUrl } ) {
 
-    const [ addedItems, setAddedItems ] = useState(0)
+    const { itemsInCart, setItemsInCart } = useContext(CartContext)
+    const [ successOnAdd, setSuccessOnAdd] = useState(false)
 
-    const addToCart = (cantidad) => {
-        setAddedItems(addedItems + parseInt(cantidad));
+
+    const addToCart = (quantity) => {
+        let previouslyAdded = itemsInCart.findIndex(item => item.id === id);
+        setItemsInCart(
+            previouslyAdded == -1
+            ?
+            itemsInCart.concat(
+                [ 
+                    {
+                        id: id,
+                        title: title, 
+                        price: price, 
+                        pictureUrl: pictureUrl, 
+                        quantity: quantity
+                    }
+                ]
+            )
+            :
+            itemsInCart[previouslyAdded].quantity += quantity
+        )
+        setSuccessOnAdd(true);
     }
 
     return (
-        <>
             <div className="ItemDetailContainer d-flex container bg-secondary-subtle m-4 border border-dark rounded">
                 <div className="DetailPictureContainer">
                     <img src={`${pictureUrl}`} alt={`${title}`} />
@@ -21,26 +40,16 @@ function ItemDetail( { description, title, price, pictureUrl } ) {
                     <h2 className="fs-1">{`${title}`}</h2>
                     <span className="fs-4">{`${description}`}</span>
                     <span className="fs-4">{`Price $${price}`}</span>
-                    {
-                        !addedItems ?
-                        <ItemCount stock="10" initial="1" onAdd={addToCart} />:
-                        <div className="container d-flex flex-column mt-5 p-3 fs-3 justify-content-center align-items-center">
-                            <img src={checkPNG} className="PNGsuccess" alt="Success adding items to cart" />
-                            You added {addedItems}  {title}/s to the cart !
-                            <Link className="linkButton" to={"/"}>
-                                <button className="btn btn-primary mb-2">Keep buying</button>
-                            </Link>
-                            <Link className="linkButton" to={"/cart"}>
-                                <button className="btn btn-success">Go to cart</button>
-                            </Link>
-                            
-                        </div>
+
+                    { 
+                    successOnAdd ?
+                    <AddedToCartAd itemTitle={title} />:
+                    <ItemCount stock="10" initial="1" onAdd={addToCart} />                    
                     }
+
                 </div>
             </div>
-        </>
     )
-
 }
 
 export default ItemDetail;

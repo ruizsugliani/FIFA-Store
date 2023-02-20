@@ -10,7 +10,9 @@ function NavBar() {
                     <NavLink to="/" className="navbar-brand">
                         <img src={logo} alt="FIFA LOGO" height="50" className="rounded border"/>
                     </NavLink>
-                    <CartWidget />
+                    <NavLink to="/cart">
+                        <CartWidget />
+                    </NavLink>
                 </div>
                 <div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

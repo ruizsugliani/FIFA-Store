@@ -5,8 +5,6 @@ import allProducts from "../data/allProducts";
 import nationsEquipment from "../data/nationsEquipment";
 import worldCupMerch from "../data/worldCupMerch";
 import { useParams } from "react-router-dom";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
 import ReactLoading from 'react-loading';
 
 function ItemListContainer(props) {
@@ -25,22 +23,18 @@ function ItemListContainer(props) {
     },[categoryArray, categoryId]);
 
     return (
-        <>
-            <NavBar />
-            <div className="ItemListContainer container-fluid d-flex flex-column justify-content-center align-items-center">
-                <div className="itemListDescription container-fluid">
-                    <strong>
-                        {props.greeting}
-                    </strong>
-                </div>
-                {
-                    (categoryArray.length === 0) ?
-                    <ReactLoading type={"bars"} color={"black"} height={'5%'} width={'5%'} /> :
-                    <ItemList items={categoryArray} />
-                }
+        <div className="ItemListContainer container-fluid d-flex flex-column justify-content-center align-items-center">
+            <div className="itemListDescription container-fluid">
+                <strong>
+                    {props.greeting}
+                </strong>
             </div>
-            <Footer />
-        </>
+            {
+                (categoryArray.length === 0) ?
+                <ReactLoading type={"bars"} color={"black"} height={'5%'} width={'5%'} /> :
+                <ItemList items={categoryArray} />
+            }
+        </div>
     );
 }
 
