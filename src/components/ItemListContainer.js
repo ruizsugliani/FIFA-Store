@@ -24,11 +24,11 @@ function ItemListContainer(props) {
 
     return (
         <div className="ItemListContainer container-fluid d-flex flex-column justify-content-center align-items-center">
-            <div className="itemListDescription container-fluid">
-                <strong>
-                    {props.greeting}
-                </strong>
-            </div>
+            {/* <div className="itemListDescription container-fluid">
+                <button onClick={productService.uploadProductsToFS(allProducts)}>
+                    Agregar Productos
+                </button>
+            </div> */}
             {
                 (categoryArray.length === 0) ?
                 <ReactLoading type={"bars"} color={"black"} height={'5%'} width={'5%'} /> :
