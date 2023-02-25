@@ -123,3 +123,8 @@ a {
 .cartItemPictureContainer {
   max-width: 200px;
 }
+
+.CartItemRemoveBtn img {
+  padding: .1rem;
+  width: 50px;
+}

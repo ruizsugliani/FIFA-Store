@@ -1,9 +1,13 @@
 import { useState } from "react";
-import { thereIsStock } from "../functions/thereIsStock.js"
 
 function ItemCount( { stock, initial, onAdd } )  {
 
     const [actualCount, setCount] = useState(parseInt(initial));
+
+    const thereIsStock = (stock, trueStatement,FalseStatement) => {
+        return parseInt(stock) === 0 ? trueStatement : FalseStatement
+    }
+    
 
     const showAvailableStock = (stock) => {
         if (parseInt(stock) === 0) {

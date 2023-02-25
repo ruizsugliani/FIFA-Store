@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import logo from '../images/fifa_store_logo.jpg'
+import logo from '../assets/fifa_store_logo.jpg'
 import CartWidget from "./CartWidget";
 
 function NavBar() {

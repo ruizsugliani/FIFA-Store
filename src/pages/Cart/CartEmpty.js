@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import EmptyCartLogo from "../images/empty_cart.png"
+import EmptyCartLogo from "../../assets/empty_cart.png"
 
 const CartEmpty = () => {
     return (

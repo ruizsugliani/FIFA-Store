@@ -1,4 +1,4 @@
-import checkPNG from "./../images/comprobado.png"
+import checkPNG from "./../assets/comprobado.png"
 import { Link } from "react-router-dom"
 
 const AddedToCartAd = ( { itemTitle }) => {

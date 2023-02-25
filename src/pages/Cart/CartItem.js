@@ -25,7 +25,7 @@ const CartItem = ( {id, title, pictureUrl, quantity, price} ) => {
                     </small>
                 </p>
             </div> 
-            {/* <CartItemRemove id={id} /> */}
+            <CartItemRemove id={id} />
         </div>
     )
 }

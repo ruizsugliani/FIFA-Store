@@ -1,33 +1,23 @@
 import { useState, useContext } from "react"
 import ItemCount from "./ItemCount"
-import AddedToCartAd from "./AddedToCartAd"
-import { CartContext } from "./../contexts/Cart"
+import AddedToCartAd from "../../components/AddedToCartAd"
+import { CartContext } from "../../contexts/CartContext"
 
 function ItemDetail( { id, description, title, price, pictureUrl } ) {
 
-    const { itemsInCart, setItemsInCart } = useContext(CartContext)
+    const { itemsInCart, setItemsInCart, addNewItem } = useContext(CartContext)
     const [ successOnAdd, setSuccessOnAdd] = useState(false)
 
 
     const addToCart = (quantity) => {
-        let previouslyAdded = itemsInCart.findIndex(item => item.id === id);
-        setItemsInCart(
-            previouslyAdded == -1
-            ?
-            itemsInCart.concat(
-                [ 
-                    {
-                        id: id,
-                        title: title, 
-                        price: price, 
-                        pictureUrl: pictureUrl, 
-                        quantity: quantity
-                    }
-                ]
-            )
-            :
-            itemsInCart[previouslyAdded].quantity += quantity
-        )
+        let newItem =   {
+                            id: id,
+                            title: title, 
+                            price: price, 
+                            pictureUrl: pictureUrl, 
+                            quantity: quantity
+                        }
+        addNewItem(newItem);
         setSuccessOnAdd(true);
     }
 
