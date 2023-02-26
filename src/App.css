@@ -128,3 +128,7 @@ a {
   padding: .1rem;
   width: 50px;
 }
+
+.PurchaseCompleteContainer img {
+  width: 2.5rem;
+}

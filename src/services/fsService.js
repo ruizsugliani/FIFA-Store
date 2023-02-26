@@ -1,22 +1,20 @@
 import { getFirestore, addDoc, collection } from "firebase/firestore";
 
-function uploadOrder(itemsInCart) {
+const uploadOrder = (itemsInCart, contactInfo) => {
     const db = getFirestore();
-    const ordersCollection = collection(db, "orders");
+    const ordersCollection = collection(db, 'orders');
+
+    console.log(contactInfo);
 
     // Set an object with all the necesary info.
     const orderInfo = {
         date: new Date().toString(),
         total: 2500,
-        contact: {
-                    fullName: "John",
-                    email:  "a@a.com",
-                    phone:  "123"
-        },
-        products: itemsInCart    
+        contactInfo,
+        products: itemsInCart
     }
     
-    addDoc(ordersCollection, orderInfo);
+    return addDoc(ordersCollection, orderInfo);
 }
 
 const uploadProductsToFS = (allProducts) => {
