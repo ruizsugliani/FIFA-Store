@@ -1,8 +1,13 @@
 import { useState } from "react";
-import { thereIsStock } from "../functions/thereIsStock.js"
 
-function ItemCount( { stock, initial } )  {
+function ItemCount( { stock, initial, onAdd } )  {
+
     const [actualCount, setCount] = useState(parseInt(initial));
+
+    const thereIsStock = (stock, trueStatement,FalseStatement) => {
+        return parseInt(stock) === 0 ? trueStatement : FalseStatement
+    }
+    
 
     const showAvailableStock = (stock) => {
         if (parseInt(stock) === 0) {
@@ -27,7 +32,10 @@ function ItemCount( { stock, initial } )  {
                         onClick={() => actualCount < stock ? setCount(actualCount + 1) : null }>+</button>
             </div>
             <div className="addToCartContainer d-flex mt-2">
-                <button className="btn btn-primary flex-fill" onClick={ () => { alert(`You added ${ actualCount } products to your cart.`) }} disabled = { thereIsStock(stock, true, false) }>Add to cart</button>
+                <button className="btn btn-primary flex-fill"
+                        onClick={ () => onAdd( actualCount )}
+                        disabled = { thereIsStock(stock, true, false) }>Add to cart
+                </button>
             </div>
             <div className="stockContainer d-flex justify-content-between mt-2">
                 {
