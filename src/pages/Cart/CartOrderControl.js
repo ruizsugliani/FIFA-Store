@@ -5,12 +5,12 @@ import { CartContext } from "../../contexts/CartContext";
 
 const CartOrderControl = ( {contactInfo} ) => {
 
-    const { itemsInCart, clearCart } = useContext(CartContext);
+    const { itemsInCart, clearCart, totalPrice } = useContext(CartContext);
     const [ orderId, setOrderId ] = useState(undefined);
 
     async function processOrder(e, contactInfo) {
         e.preventDefault();
-        const response = await fsService.uploadOrder(itemsInCart, contactInfo);
+        const response = await fsService.uploadOrder(itemsInCart, contactInfo, totalPrice);
         setOrderId(response.id);
     }
 

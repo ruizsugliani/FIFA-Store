@@ -19,11 +19,11 @@ const CartProvider = ( { children } )  => {
     }
 
     const isAlreadyInCart = (newItem) => {
-        return itemsInCart.some(item => item.id === newItem.id)
+        return itemsInCart.some(item => item.title === newItem.title)
     }
 
     const updateQuantity= (newItem) => {
-        let itemIndex = itemsInCart.findIndex(item => item.id === newItem.id);
+        let itemIndex = itemsInCart.findIndex(item => item.title === newItem.title);
         itemsInCart[itemIndex].quantity += newItem.quantity;
     }
 
@@ -39,11 +39,6 @@ const CartProvider = ( { children } )  => {
     const clearCart = () => {
         setItemsInCart([])
     }
-
-    // const getTotalItemsInCart = () => {
-    //     let initialCount = 0;
-    //     return itemsInCart.reduce((acc, item) => acc + item.quantity, initialCount);
-    // }
 
     return (
         <CartContext.Provider value={ {itemsInCart, setItemsInCart, hasProducts, addNewItem, itemsTotal, removeItem, clearCart, totalPrice} }>

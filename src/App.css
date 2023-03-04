@@ -77,10 +77,8 @@ a {
 
 .itemPrice {
   position: absolute;
-  left: 15.5rem;
+  left: 14.5rem;
   top: 16rem;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
 }
 
 .ItemContainer:hover {

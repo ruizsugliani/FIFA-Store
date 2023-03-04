@@ -6,11 +6,13 @@ const CartCheckout = () => {
 
     const { totalPrice } = useContext(CartContext);
 
-    
     const [contactInfo, setContactInfo] = useState({
-        fullName:   '',
-        email:      '',
-        phone:      ''
+        fullName:           '',
+        fullNameValidator:  '',
+        email:              '',
+        emailValidator:     '',
+        phone:              '',
+        phoneValidator:     ''
     });
     
     const handleInputChange = (event) => {
@@ -32,6 +34,8 @@ const CartCheckout = () => {
                         className="form-control border border-dark" 
                         id="fullName" 
                         aria-describedby="fullNameHelp" 
+                        minLength={8}
+                        maxLength={35}
                     />
                 </div>
                 <div className="mb-3">
@@ -43,6 +47,8 @@ const CartCheckout = () => {
                         className="form-control border border-dark" 
                         id="email" 
                         aria-describedby="emailHelp" 
+                        minLength={8}
+                        maxLength={50}
                     />
                 </div>
                 <div className="mb-3">
@@ -54,6 +60,8 @@ const CartCheckout = () => {
                         className="form-control border border-dark" 
                         id="phone" 
                         aria-describedby="phoneHelp" 
+                        minLength={10}
+                        maxLength={10}
                     />
                 </div>
                 <div className={`container d-flex flex-column justify-content-center align-items-center mt-5 fs-3 text`}>

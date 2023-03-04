@@ -3,9 +3,9 @@ import ItemCount from "./ItemCount"
 import AddedToCartAd from "../../components/AddedToCartAd"
 import { CartContext } from "../../contexts/CartContext"
 
-function ItemDetail( { id, description, title, price, pictureUrl } ) {
+function ItemDetail( { id, title, price, pictureUrl } ) {
 
-    const { itemsInCart, setItemsInCart, addNewItem } = useContext(CartContext)
+    const { addNewItem } = useContext(CartContext)
     const [ successOnAdd, setSuccessOnAdd] = useState(false)
 
 
@@ -28,7 +28,6 @@ function ItemDetail( { id, description, title, price, pictureUrl } ) {
                 </div>
                 <div className="container d-flex flex-column justify-content-center">
                     <h2 className="fs-1">{`${title}`}</h2>
-                    <span className="fs-4">{`${description}`}</span>
                     <span className="fs-4">{`Price $${price}`}</span>
 
                     { 

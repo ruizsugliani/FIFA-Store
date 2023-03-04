@@ -1,5 +1,5 @@
 import ItemDetail from "./ItemDetail";
-import { productService } from "../../services/productService";
+import { fsService } from "../../services/fsService";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -8,11 +8,10 @@ import ReactLoading from "react-loading";
 function ItemDetailContainer() {
 
     const  { itemId } = useParams();
-    const [item, setItem] = useState(null);
+    const [item, setItem] = useState(undefined);
 
     useEffect( () => {
-        productService.getById(itemId)
-        .then(data => setItem(data))
+        fsService.getProduct(itemId).then(resp => setItem(resp));
     }, [itemId])
     
     return (
