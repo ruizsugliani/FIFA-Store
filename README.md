@@ -1,15 +1,13 @@
-# Getting Started with Create React App
+# Welcome to a brand new (and unofficial) FIFA Store.
+This app is the result of all the knowledge I got during the React JS course of CoderHouse.\
+To see the app in your browser, first clone this repository, go to the proyect directory and then write in your console..
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+### `npm install`
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This script runs the app in the development mode.\
+A new window will be opened in [http://localhost:3000](http://localhost:3000).
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
