@@ -24,9 +24,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Initialize other Firebase services
-const db = getFirestore(app); // Inicializa Firestore
-const auth = getAuth(app); // Inicializa Authentication
-const analytics = getAnalytics(app); // Inicializa Analytics (opcional)
+getFirestore(app); // Inicializa Firestore
+getAuth(app); // Inicializa Authentication
+getAnalytics(app); // Inicializa Analytics (opcional)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
