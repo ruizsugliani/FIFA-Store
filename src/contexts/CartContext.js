@@ -32,7 +32,7 @@ const CartProvider = ( { children } )  => {
     }
 
     const removeItem = (id) => {
-        let updatedItemsInCart = itemsInCart.filter( item => item.id != id );
+        let updatedItemsInCart = itemsInCart.filter( item => item.id !== id );
         setItemsInCart(updatedItemsInCart);
     }
 

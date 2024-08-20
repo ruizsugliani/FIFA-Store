@@ -13,7 +13,7 @@ const CartItemRemove = ( { id } ) => {
                 className="btn CartItemRemoveBtn" >
             <img 
                 src={itemDeletePNG} 
-                alt="item delete button image" />
+                alt="item delete button" />
         </button>
     )
 }

@@ -1,6 +1,5 @@
 import CartDetail from "./CartDetail";
 import CartCheckout from "./CartCheckout";
-import { useEffect, useState, useContext } from "react";
 
 const CartDetailContainer = () => {
 
